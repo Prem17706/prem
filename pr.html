@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("https://th.bing.com/th/id/OIP.gC5joipBP8OzO1MpK90rSQHaEK?w=582&h=327&rs=1&pid=ImgDetMain");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            background: url("https://calaero.edu/wp-content/uploads/2023/08/iStock-1332501286-scaled.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+           
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input, 
+        .form-container select, 
+        .form-container textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 90%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor:pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Travel Agency Registration</h2>
+    <form action="/submit_registration" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="destination">Preferred Destination:</label>
+        <select id="destination" name="destination">
+            <option value="europe">Europe</option>
+            <option value="asia">Asia</option>
+            <option value="america">America</option>
+            <option value="africa">Africa</option>
+            <option value="australia">Australia</option>
+        </select>
+        
+        <label for="travel_date">Travel Date:</label>
+        <input type="date" id="travel_date" name="travel_date" required>
+        
+        <label for="message">Additional Information:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
