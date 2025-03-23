@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('https://images.bhaskarassets.com/web2images/521/2022/07/01/lpu-730x5481_1656656176.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .from{
+            max-width: 100px;
+        }
+  label{
+    display: block;
+    margin-bottom: 10px;
+  }
+ div{
+    background-color: rgba(255, 255, 255, 0.77);
+    border-radius: 10px;
+    padding:50px;
+    max-width:400px;
+   max-height: auto;
+    
+ }
+ input[type="text"], input[type="email"], input[type="password"], select, textarea{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+ }
+input[type="submit"], input[type="reset"]{
+    background-color: rgba(225, 83, 18, 0.746);
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    border:none;
+    transition:0.5s;
+}
+input:focus, textarea:focus, select:focus{
+    background-color: antiquewhite;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+    background-color: rgba(218, 82, 9, 0.837);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+h2{
+    text-align: center;
+}
+.error{
+    color:red;
+}
+    </style>
+</head>
+<body>
+    <div>
+  <form onsubmit="return(validation())" name="myForm">
+    <h2>Don't have an account?! Want to join us?</h2>
+    <label for="name">Name:</label>
+    <input type="text" placeholder="First name Last name" id="name" name="name"><span id="errorname" class="error"></span><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><span id="erroremail" class="error"></span><br>
+    <label for="cities">Select city</label>
+<select name="cities" id="cities">
+<option value="Select">Select</option>
+<option value="Noida">Noida</option>
+<option value="Delhi">Delhi</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Bangalore">Bangalore</option>
+</select><span id="errorcity" class="error"></span><br>
+<label for="address">Address:</label>
+<textarea name="" id="address" cols="30" rows="5" name="address"></textarea><span id="erroraddress" class="error"></span><br>
+<label for="gender">Gender:</label>
+<input type="radio" value="male" name="gender"> male
+<input type="radio" value="female" name="gender"> female
+<input type="radio" value="others" name="gender">Others<span id="errorgender" class="error"></span>
+<br>
+<label for="password">Password</label>
+<input type="password" name="password" id="password"><span id="errorpassword" class="error"></span><br>
+<label for="upload">Upload file:</label>
+<input type="file" name="file" id="file"><span id="errorfile" class="error"></span><br> <br>
+<input type="submit" value="SUBMIT FORM">
+<input type="reset">
+
+<script>
+ function validation(){
+    let isValid = true;
+    if(document.getElementById("name").value ==""){
+       document.getElementById("errorname").innerText = "Name cannot be left blank";
+       isValid = false
+    }else{
+        document.getElementById("errorname").innerText = "";
+    }
+    if(document.getElementById("email").value ==""){
+       document.getElementById("erroremail").innerText = "Email cannot be left blank";
+       isValid = false
+    }else{
+        document.getElementById("erroremail").innerText = "";
+    }
+    if(document.getElementById("cities").value =="Select"){
+       document.getElementById("errorcity").innerText = "City cannot be left blank";
+       isValid = false
+    }else{
+        document.getElementById("errorcity").innerText = "";
+    }
+    if(document.getElementById("address").value ==""){
+       document.getElementById("erroraddress").innerText = "Address cannot be left blank";
+       isValid = false
+    }else{
+        document.getElementById("erroraddress").innerText = "";
+    }
+    if(document.myForm.gender.value ==""){
+       document.getElementById("errorgender").innerText = "Please select gender";
+       isValid = false
+    }else{
+        document.getElementById("errorgender").innerText = "";
+    }
+    if(document.getElementById("password").value ==""){
+       document.getElementById("errorpassword").innerText = "Password cannot be left blank";
+       isValid = false
+    }else{
+        document.getElementById("errorpassword").innerText = "";
+    }
+    if(document.getElementById("file").value ==""){
+       document.getElementById("errorfile").innerText = "Please browse a file";
+       isValid = false
+    }else{
+        document.getElementById("errorfile").innerText = "";
+    }
+    return isValid;
+ }
+</script>
+  </form>  
+</div>
+</body>
+</html>
