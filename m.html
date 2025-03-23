@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking - Flights, Trains & Buses</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #0056b3;
+      padding: 10px 0;
+      
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      
+     transition: 0.5s;
+    }
+    .navbar a:hover{
+      background-color: rgba(67, 69, 67, 0);
+      border: 1px solid rgb(48, 42, 42);
+      border-radius: 10px;
+      padding: 10px;
+
+    }
+    
+    .hero {
+      background: url('travel-banner.jpg') no-repeat center center / cover;
+      text-align: center;
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin: 10px 0 20px;
+    }
+
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .search-bar input,
+    .search-bar select,
+    .search-bar button {
+      padding: 10px;
+      font-size: 1em;
+    }
+
+    .search-bar button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #0056b3;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition:  0.3s;
+    }
+
+    .card:hover {
+   transform: translateY(19.1px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 70%;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Travel Booking - Flights, Trains & Buses</h1>
+  </header>
+
+  <!-- Navigation -->
+  <div class="navbar">
+    <a href="m1.html">Flights</a>
+    <a href="#trains">Trains</a>
+    <a href="#buses">Buses</a>
+    <a href="#offers">Offers</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Plan Your Next Journey</h2>
+    <p>Find the best deals on flights, trains, and buses all in one place.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="From">
+      <input type="text" placeholder="To">
+      <select>
+        <option value="flight">Flight</option>
+        <option value="train">Train</option>
+        <option value="bus">Bus</option>
+      </select>
+      <input type="date">
+      <button>Search</button>
+    </div>
+  </section>
+
+  <!-- Flights Section -->
+  <section id="flights" class="section">
+    <h2>Popular Flights</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.TvB80L0f9hRZ235V21JiGwHaDP?w=700&h=307&rs=1&pid=ImgDetMain" alt="Flight">
+        <h3>New York to London</h3>
+        <p>Starting at $500</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2020/03/iStock-danieldep-airplane-1024x600.jpg" alt="Flight">
+        <h3>Los Angeles to Tokyo</h3>
+        <p>Starting at $750</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trains Section -->
+  <section id="trains" class="section">
+    <h2>Popular Train Routes</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/mrmF7UWcEu4/maxresdefault.jpg" alt="Train">
+        <h3>Paris to Lyon</h3>
+        <p>Starting at €50</p>
+      </div>
+      <div class="card">
+        <img src="https://th.bing.com/th/id/OIP.YJ9Nlt0EeMOhUrjOHMealAHaEK?rs=1&pid=ImgDetMain" alt="Train">
+        <h3>Berlin to Munich</h3>
+        <p>Starting at €60</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buses Section -->
+  <section id="buses" class="section">
+    <h2>Popular Bus Routes</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://outliermedia.org/wp-content/uploads/2022/10/DDOT_2014_New_Flyer_XD40_1410-1568x880.jpeg" alt="Bus">
+        <h3>Chicago to Detroit</h3>
+        <p>Starting at $30</p>
+      </div>
+      <div class="card">
+        <img src="https://www.wedreamoftravel.com/wp-content/uploads/2019/11/Big-Bus-Tour-1440x1080.jpg" alt="Bus">
+        <h3>San Francisco to Las Vegas</h3>
+        <p>Starting at $40</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Travel Booking. All rights reserved. Contact: support@travelbooking.com</p>
+  </footer>
+</body>
+</html>
